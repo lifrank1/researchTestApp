@@ -2,6 +2,10 @@ require "active_support/core_ext/integer/time"
 
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
+  # INSERT BY FRANK
+  config.log_level = :debug
+  config.active_record.verbose_query_logs = true
+  ActiveRecord::Base.logger = Logger.new(STDOUT)
 
   # In the development environment your application's code is reloaded any time
   # it changes. This slows down response time but is perfect for development
